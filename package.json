@@ -1,0 +1,18 @@
+{
+  "name": "employee-management-system",
+  "version": "1.0.0",
+  "description": "A complete Employee Management system.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Aravind.J.A",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^7.4.2"
+  }
+}
