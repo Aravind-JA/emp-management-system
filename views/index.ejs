@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- head -->
+<%- include("_head") %>
+<body>
+    <div class="full_page">  
+<!-- sidebar -->
+<%- include("_sidebar") %>
+
+        <div class="main_page">
+
+            <!-- main header -->
+            <%- include("_mainHeader") %>
+
+            <!--  Alert -->
+            <%- include("_alert") %>
+
+            <!-- table -->
+            <%- include("_table.ejs") %>
+              
+           <!-- Pagination -->
+           <%- include("_pagination") %>
+
+
+           <!-- footer -->
+           <%- include("_footer") %>
+
+        </div>
+    </div>
+
+    <!-- add employee -->
+    <%- include("_add") %>
+
+    <!-- Edit Employee -->
+    <%- include("_edit") %>
+
+    <!-- Delete Employee -->
+    <%- include("_delete") %>
+
+    <!-- overlay -->
+    <%- include("_overlay") %>
+
+    <script src="Assets/JavaScript/temp.js"></script>
+</body>
+
+</html>

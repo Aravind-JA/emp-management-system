@@ -1,0 +1,136 @@
+<div class="add_employee rounded-3" id="edit_emp">
+    <div class="col-12 p-3">
+        <form id="edit_user_form">
+            <div class="col-12">
+                <div class="form_heading">
+                    <h1 class="emp_heading">Edit Employee</h1>
+                    <button type="button" onclick="closeEditEmployee()"><span class="material-symbols-outlined">
+                            close
+                        </span></button>
+                </div>
+            </div>
+            <div class="col-12 emp-image-section">
+                <div class="emp-image">
+                    <img src="" alt="" id="emp-image">
+                </div>
+                <button class="btn" type="button" id="image-update" onclick="updateImage()">Change</button>
+                <input type="file" id="update-user-image">
+            </div>
+            <div class="row">
+                <div class="col-3 extend">
+                    <label for="salutation" class="form_label">Salutation</label>
+                    <select class="form-select form_input" name="salutation" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Mrs">Mrs</option>
+                    </select>
+                    <div class="error" id="salutationErr"></div>
+                </div>
+                <div class="col extend">
+                    <label for="firstName" class="form_label">First Name</label>
+                    <input type="text" name="firstName" placeholder="John" class="form_input" required>
+                    <div class="error" id="firstNameErr"></div>
+                </div>
+                <div class="col extend">
+                    <label for="lastName" class="form_label">Last Name</label>
+                    <input type="text" name="lastName" placeholder="Wick" class="form_input" required>
+                    <div class="error" id="lastNameErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 extend">
+                    <label for="email" class="form_label">Email Address</label>
+                    <input type="email" name="email" placeholder="mail@example.com" class="form_input" required>
+                    <div class="error" id="emailErr"></div>
+                </div>
+                <div class="col-6 extend">
+                    <label for="phone" class="form_label">Mobile Number</label>
+                    <input type="number" name="phone" placeholder="enter mobile number" class="form_input" required>
+                    <div class="error" id="phoneErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 extend">
+                    <label for="dob" class="form_label">Date of Birth</label>
+                    <input type="date" name="dob" placeholder="select date of birth" class="form_input" required>
+                    <div class="error" id="dobErr"></div>
+                </div>
+                <div class="col-6 extend">
+                    <label for="gender" class="form_label">Gender</label>
+                    <div class="onSameLine mt-2">
+                        <div class="form-check onSameLine me-3">
+                            <input class="form-check-input check_input me-2" type="radio" id="Male" name="gender"
+                                value="Male" required>
+                            <label class="form-check-label" for="Male">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check onSameLine">
+                            <input class="form-check-input check_input me-2" type="radio" id="Female" name="gender"
+                                value="Female" required>
+                            <label class="form-check-label" for="Female">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                    <div class="error" id="genderErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <label for="qualifications" class="form_label">Qualifications</label>
+                    <input type="text" name="qualifications" placeholder="enter Qualififcations" class="form_input"
+                        required>
+                    <div class="error" id="qualificationErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <label for="address" class="form_label">Address</label>
+                    <input type="text" name="address" placeholder="enter address" class="form_input" required>
+                    <div class="error" id="addressErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 extend">
+                    <label for="country" class="form_label">Country</label>
+                    <select class="form-select form_input" name="country" required>
+                        <option value="" selected disabled>Select Country</option>
+                        <option value="India">India</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                    </select>
+                    <div class="error" id="countryErr"></div>
+                </div>
+                <div class="col-6 extend">
+                    <label for="State" class="form_label">State</label>
+                    <select class="form-select form_input" name="state" placeholder="Select State" required>
+                        <option value="" selected disabled>Select State</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    </select>
+                    <div class="error" id="stateErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 extend">
+                    <label for="city" class="form_label">City</label>
+                    <input type="text" name="city" placeholder="enter city" class="form_input" required>
+                    <div class="error" id="cityErr"></div>
+                </div>
+                <div class="col-6 extend">
+                    <label for="pin" class="form_label">Pin/Zip</label>
+                    <input type="text" name="pin" placeholder="enter pin/zip" class="form_input" required>
+                    <div class="error" id="pinErr"></div>
+                </div>
+            </div>
+            <div class="error_message" id="error_message"                                                 ></div>
+            <div class="add-emp-actions col-12">
+                <button class="btn btn-outline-primary" type="button" onclick="closeEditEmployee()">Cancel</button>
+                <button class="btn btn-primary" type="submit" id="editEmployee">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

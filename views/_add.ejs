@@ -1,0 +1,146 @@
+ <!-- ADD Employee-->
+ <div class="add_employee rounded-3" id="add_emp">
+    <div class="col-12 p-3">
+        <form id="add_user_form" name="addUserForm" action="/employees" method="POST">
+            <div class="col-12">
+                <div class="form_heading">
+                    <h1 class="emp_heading">Basic Details</h1>
+                    <button type="button" onclick="closeAddEmployee()"><span class="material-symbols-outlined">
+                            close
+                        </span></button>
+                </div>
+                <input type="file" id="upload_user_image" class="upload_user_image">
+                <div class="file_input p-4" id="file_input">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" fill="none">
+                        <path
+                            d="M8.57143 21.25H15.4286C16.3714 21.25 17.1429 20.4906 17.1429 19.5625V11.1249H19.8686C21.3943 11.1249 22.1657 9.30239 21.0857 8.23926L13.2171 0.493596C12.5486 -0.164532 11.4686 -0.164532 10.8 0.493596L2.93143 8.23926C1.85143 9.30239 2.60571 11.1249 4.13143 11.1249H6.85714V19.5625C6.85714 20.4906 7.62857 21.25 8.57143 21.25ZM1.71429 24.625H22.2857C23.2286 24.625 24 25.3844 24 26.3125C24 27.2406 23.2286 28 22.2857 28H1.71429C0.771429 28 0 27.2406 0 26.3125C0 25.3844 0.771429 24.625 1.71429 24.625Z"
+                            fill="#4318FF" />
+                    </svg>
+                    <h6 class="upload">Upload Image</h6>
+                    <p class="upload_text">PNG,JPG files are allowed</p>
+                </div>
+                <div class="on-image-selected" id="imageSection">
+                    <div id="image_preview"></div>
+                    <button class="btn" type="button" onclick="uploadUserImage.click()">Change</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 extend">
+                    <label for="salutation" class="form_label">Salutation</label>
+                    <select class="form-select form_input" name="salutation" required autofocus>
+                        <option value="" selected disabled>Select</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Mrs">Mrs</option>
+                    </select>
+                    <div class="error" id="salutationErr"></div>
+                </div>
+                <div class="col extend">
+                    <label for="firstName" class="form_label">First Name</label>
+                    <input type="text" name="firstName" placeholder="John" class="form_input" required>
+                    <div class="error" id="firstNameErr"></div>
+                </div>
+                <div class="col extend">
+                    <label for="lastName" class="form_label">Last Name</label>
+                    <input type="text" name="lastName" placeholder="Wick" class="form_input" required>
+                    <div class="error" id="lastNameErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 extend">
+                    <label for="email" class="form_label">Email Address</label>
+                    <input type="email" name="email" placeholder="mail@example.com" class="form_input" required>
+                    <div class="error" id="emailErr"></div>
+                </div>
+                <div class="col-6 extend">
+                    <label for="phone" class="form_label">Mobile Number</label>
+                    <input type="text" name="phone" placeholder="enter mobile number" class="form_input" required>
+                    <div class="error" id="phoneErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 extend">
+                    <label for="dob" class="form_label">Date of Birth</label>
+                    <input type="date" name="dob" placeholder="select date of birth" class="form_input" required>
+                    <div class="error" id="dobErr"></div>
+                </div>
+                <div class="col-6 extend">
+                    <label class="form_label">Gender</label>
+                    <div class="onSameLine mt-2">
+                        <div class="form-check onSameLine me-3">
+
+                            <label class="form-check-label" for="Male">
+                                <input class="form-check-input check_input me-2" type="radio" id="Male"
+                                    name="gender" value="Male" required>
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check onSameLine">
+
+                            <label class="form-check-label" for="Female">
+                                <input class="form-check-input check_input me-2" type="radio" id="Female"
+                                    name="gender" value="Female" required>
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                    <div class="error" id="genderErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <label for="qualifications" class="form_label">Qualifications</label>
+                    <input type="text" name="qualifications" placeholder="enter Qualififcations" class="form_input"
+                        required>
+                    <div class="error" id="qualificationErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <label for="address" class="form_label">Address</label>
+                    <input type="text" name="address" placeholder="enter address" class="form_input" required>
+                    <div class="error" id="addressErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 extend">
+                    <label for="country" class="form_label">Country</label>
+                    <select class="form-select form_input" name="country" required>
+                        <option value="" selected disabled>Select Country</option>
+                        <option value="India">India</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                    </select>
+                    <div class="error" id="countryErr"></div>
+                </div>
+                <div class="col-6 extend">
+                    <label for="State" class="form_label">State</label>
+                    <select class="form-select form_input" name="state" placeholder="Select State" required>
+                        <option value="" selected disabled>Select State</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    </select>
+                    <div class="error" id="stateErr"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 extend">
+                    <label for="city" class="form_label">City</label>
+                    <input type="text" name="city" placeholder="enter city" class="form_input" required>
+                    <div class="error" id="cityErr"></div>
+                </div>
+                <div class="col-6 extend">
+                    <label for="pin" class="form_label">Pin/Zip</label>
+                    <input type="text" name="pin" placeholder="enter pin/zip" class="form_input" required>
+                    <div class="error" id="pinErr"></div>
+                </div>
+            </div>
+            <div class="error_message" id="error_message"></div>
+            <div class="add-emp-actions col-12">
+                <button class="btn btn-outline-primary" type="button" onclick="closeAddEmployee()">Cancel</button>
+                <button class="btn btn-primary" type="submit" onclick="formValidation()">Add Employee</button>
+            </div>
+        </form>
+    </div>
+</div>

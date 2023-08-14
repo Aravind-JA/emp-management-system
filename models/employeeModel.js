@@ -2,9 +2,24 @@ const mongoose = require('mongoose');
 
 // Schema for the employee record
 const employeeSchema = mongoose.Schema({
-    name: String,
+    // user_id: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     required: true,
+    //     ref:"User"
+    // },
+    salutation: String,
+    firstName: String,
+    lastName: String,
     email: String,
-    phone: Number
+    phone: Number,
+    dob: Date,
+    gender: String,
+    qualifications: String,
+    address: String,
+    country: String,
+    state: String,
+    city: String,
+    pin:Number
 },
     {
         timestamps: true,

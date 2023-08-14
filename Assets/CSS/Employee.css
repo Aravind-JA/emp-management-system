@@ -1,0 +1,89 @@
+.employee_details {
+    width: 800px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px 20px 30px;
+}
+
+.emp_img_banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.employee_image {
+    border-radius: 100px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    bottom: -50px;
+    padding: 4px;
+    background-color: white;
+}
+
+.emp_naming {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.emp_naming h2 {
+    color: #2B3674;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.emp_naming p {
+    color: #707EAE;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.emp_info {
+    margin: 25px 0 40px;
+}
+
+.emp_details_row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.emp_col_info {
+    padding: 10px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 18px 40px 0px rgba(112, 144, 176, 0.2);
+}
+
+.emp_col_info h6 {
+    color: #707EAE;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.emp_col_info h4 {
+    color: #2B3674;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.emp_actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.emp_actions button {
+    padding: 15px 40px;
+    border-radius: 15px;
+}
